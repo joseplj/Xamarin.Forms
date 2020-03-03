@@ -17,7 +17,7 @@ namespace Xamarin.Forms.Platform.iOS
 			var modalPresentationStyle = elementConfiguration?.On<PlatformConfiguration.iOS>()?.ModalPresentationStyle() ?? PlatformConfiguration.iOSSpecific.UIModalPresentationStyle.FullScreen;
 			ModalPresentationStyle = modalPresentationStyle.ToNativeModalPresentationStyle();
 
-			View.BackgroundColor = UIColor.White;
+			View.BackgroundColor = ColorExtensions.BackgroundColor;
 			View.AddSubview(modal.ViewController.View);
 			TransitioningDelegate = modal.ViewController.TransitioningDelegate;
 			AddChildViewController(modal.ViewController);
@@ -89,7 +89,7 @@ namespace Xamarin.Forms.Platform.iOS
 
 		public override void ViewWillAppear(bool animated)
 		{
-			View.BackgroundColor = UIColor.White;
+			View.BackgroundColor = ColorExtensions.BackgroundColor;
 			base.ViewWillAppear(animated);
 		}
 

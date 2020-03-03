@@ -36,6 +36,16 @@ namespace Xamarin.Forms.Platform.iOS
 				SetupLayer();
 		}
 
+#if __XCODE11__
+		public override void TraitCollectionDidChange(UITraitCollection previousTraitCollection)
+		{
+			base.TraitCollectionDidChange(previousTraitCollection);
+
+			// Make sure the control adheres to changes UI theme
+			SetupLayer();
+		}
+#endif
+
 		public virtual void SetupLayer()
 		{
 			float cornerRadius = Element.CornerRadius;
@@ -46,7 +56,7 @@ namespace Xamarin.Forms.Platform.iOS
 			Layer.CornerRadius = cornerRadius;
 
 			if (Element.BackgroundColor == Color.Default)
-				Layer.BackgroundColor = UIColor.White.CGColor;
+				Layer.BackgroundColor = ColorExtensions.BackgroundColor.CGColor;
 			else
 				Layer.BackgroundColor = Element.BackgroundColor.ToCGColor();
 
