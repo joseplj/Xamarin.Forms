@@ -13,7 +13,8 @@ namespace Xamarin.Forms.Controls.GalleryPages.SwipeViewGalleries
 				Children =
 				{
 					GalleryBuilder.NavButton("Horizontal CollectionView Gallery", () => new SwipeHorizontalCollectionViewGallery(), Navigation),
-					GalleryBuilder.NavButton("Vertical CollectionView Gallery", () => new SwipeVerticalCollectionViewGallery(), Navigation)
+					GalleryBuilder.NavButton("Vertical CollectionView Gallery", () => new SwipeVerticalCollectionViewGallery(), Navigation),
+					GalleryBuilder.NavButton("CollectionView using VisualStates Gallery", () => new SwipeViewVisualStatesCollectionGallery(), Navigation),
 				}
 			};
 		}
