@@ -28,6 +28,7 @@ namespace Xamarin.Forms.Controls.GalleryPages.SwipeViewGalleries
 						GalleryBuilder.NavButton("ListView (RecycleElement) Gallery", () => new SwipeListViewGallery(), Navigation),
 						GalleryBuilder.NavButton("CollectionView Galleries", () => new SwipeCollectionViewGallery(), Navigation),
 						GalleryBuilder.NavButton("CarouselView Gallery", () => new SwipeCarouselViewGallery(), Navigation),
+						GalleryBuilder.NavButton("SwipeView GestureRecognizer Gallery", () => new SwipeViewGestureRecognizerGallery(), Navigation),
 						GalleryBuilder.NavButton("SwipeBehaviorOnInvoked Gallery", () => new SwipeBehaviorOnInvokedGallery(), Navigation),
 						GalleryBuilder.NavButton("Custom SwipeItem Galleries", () => new CustomSwipeItemGallery(), Navigation),
 						GalleryBuilder.NavButton("SwipeItem Icon Gallery", () => new SwipeItemIconGallery(), Navigation),
