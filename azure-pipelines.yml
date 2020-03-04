@@ -111,7 +111,7 @@ jobs:
   strategy:
     matrix:
       BuildForVS2017:
-        buildForVS2017:  'true'
+        buildForVS2017:  'false'
       BuildForVS2019:
         buildForVS2017:  'false'
   variables:
