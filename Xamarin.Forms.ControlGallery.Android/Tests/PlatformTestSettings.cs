@@ -20,7 +20,14 @@ namespace Xamarin.Forms.ControlGallery.Android.Tests
 			};
 		}
 
-		public Assembly Assembly { get => Assembly.GetExecutingAssembly(); }
+		public Assembly Assembly { get => FigureOutAssembly(); }
 		public Dictionary<string, object> TestRunSettings { get; }
+
+		Assembly FigureOutAssembly() 
+		{
+			var options = Assembly.GetExecutingAssembly().GetReferencedAssemblies();
+
+			return Assembly.Load(options[0].FullName);
+		}
 	}
 }
