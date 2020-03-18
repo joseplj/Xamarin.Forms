@@ -25,9 +25,7 @@ namespace Xamarin.Forms.ControlGallery.Android.Tests
 
 		Assembly FigureOutAssembly() 
 		{
-			var options = Assembly.GetExecutingAssembly().GetReferencedAssemblies();
-
-			return Assembly.Load(options[0].FullName);
+			return Assembly.Load("Xamarin.Forms.Platform.Android.UnitTests, Version = 2.0.0.0, Culture = neutral, PublicKeyToken = null");
 		}
 	}
 }
